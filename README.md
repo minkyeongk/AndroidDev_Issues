@@ -7,6 +7,7 @@
 constructor 앞에 @JvmOverloads 붙임  
 @JvmOverload constructor( ~  
 ```   
+참고: https://medium.com/@futureofdev/%EC%BD%94%ED%8B%80%EB%A6%B0-kotlin-customview-774e236ca034
    
 
 **2. uri에서 bitmap 가져오는 코드** 
