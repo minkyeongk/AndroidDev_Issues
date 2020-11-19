@@ -44,3 +44,10 @@ ft?.replace(this.id, newFragment)?.addToBackStack(null)?.commit()
 ```
 새로고침을 액티비티 finish 후 프래그먼트 OnActivityResult에서 재호출로 구현, 화면전환 애니메이션 제거  
 ```
+
+
+ **7. (중요) git pull 취소하는 명령**  
+ ```  
+ git reset --hard ORIG_HEAD  
+ ```  
+
