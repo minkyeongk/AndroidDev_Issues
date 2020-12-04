@@ -54,8 +54,9 @@ ft?.replace(this.id, newFragment)?.addToBackStack(null)?.commit()
   
   **8. 다른 액티비티와 연결된 액티비티 새로고침**  
  ```  
- startActivityForResult로 실행된 액티비티를 새로고침 하는 경우, 새로고침한 Activity와 호출한 프래그먼트(시작점) 간에는 통신을 할 수가 없음 (프래그먼트 > 액티비티 > 새로고침 구조)  
- > 새로고침을 액티비티 finish후 재호출로 구현하되, 화면전환 없도록 구현   
+ startActivityForResult로 실행된 액티비티를 새로고침 하는 경우, 새로고침한 Activity와 호출한 프래그먼트(시작점) 간에는 통신을 할 수가 없음  
+ (프래그먼트 > 액티비티 > 새로고침 구조)   
+ -> 새로고침을 액티비티 finish후 재호출로 구현하되, 화면전환 없도록 구현   
  ```  
  
  
