@@ -46,8 +46,24 @@ ft?.replace(this.id, newFragment)?.addToBackStack(null)?.commit()
 ```
 
 
- **7. (중요) git pull 취소하는 명령**  
+ **7. (중요) git pull 취소하는 명령 - git 관련 업데이트 예정 <branch master에서 main으로 변경>**  
  ```  
  git reset --hard ORIG_HEAD  
  ```  
+ 
+  
+  **8. 다른 액티비티와 연결된 액티비티 새로고침**  
+ ```  
+ startActivityForResult로 실행된 액티비티를 새로고침 하는 경우, 새로고침한 Activity와 호출한 프래그먼트(시작점) 간에는 통신을 할 수가 없음 (프래그먼트 > 액티비티 > 새로고침 구조)  
+ > 새로고침을 액티비티 finish후 재호출로 구현하되, 화면전환 없도록 구현   
+ ```  
+ 
+ 
+  **9. notifyItemChanged시 payload 넘겨서 아이템 일부분만 업데이트 (코드 추가 예정)  
+ ```  
+ 
+ ```  
+ 
+ 
+ 
 
