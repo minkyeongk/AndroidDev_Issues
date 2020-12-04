@@ -60,7 +60,7 @@ ft?.replace(this.id, newFragment)?.addToBackStack(null)?.commit()
  ```  
  
  
-  **9. notifyItemChanged시 payload 넘겨서 아이템 일부분만 업데이트 (코드 추가 예정)  
+  **9. notifyItemChanged시 payload 넘겨서 아이템 일부분만 업데이트 (코드 추가 예정)**  
  ```  
  
  ```  
