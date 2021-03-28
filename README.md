@@ -10,12 +10,13 @@ constructor 앞에 @JvmOverloads 붙임
 참고: https://medium.com/@futureofdev/%EC%BD%94%ED%8B%80%EB%A6%B0-kotlin-customview-774e236ca034
 <br/>   
 
+
 #### 2. uri에서 bitmap 가져오는 코드   
 ```
 (MediaStore.Images.Media.getBitmap(this.getContentResolver(), data?.data))  
 인자: (컨텐츠 리졸버, uri)
 ```
-<br/>   
+<br/>    
          
       
 #### 3. 리싸이클러뷰 순서 꼬임 문제 해결: 어댑터에 아래 함수 오버라이드 해주기 (이외에도 필요한 기본 오버라이드 함수 빼먹지 말기)**
@@ -33,7 +34,7 @@ return items[position].hashCode().toLong()
 val zonedDate = ZonedDateTime.parse(writeTime)  
 val date = Date.from(zonedDate.toInstant())
 ```
-<br/>   
+<br/>      
       
    
 #### 5. Fragment 새로고침 코드: 기존 Fragment를 단순히 detach하고 attach하는 것이 아니라 새로운 프래그먼트 생성해 replace 처리
@@ -43,20 +44,22 @@ val newFragment: CommunityFragment = CommunityFragment()
 val ft = this.fragmentManager?.beginTransaction()  
 ft?.replace(this.id, newFragment)?.addToBackStack(null)?.commit()  
 ```
-      
+<br/>   
+
      
 #### 6.startActivityForResult 로 실행된 액티비티를 새로고침 하는 경우, 새로고침한 Activity와 처음 호출한 프래그먼트 간 통신 불가 (OnActivityResult 활용)   
 ```
 새로고침을 액티비티 finish 후 프래그먼트 OnActivityResult에서 재호출로 구현, 화면전환 애니메이션 제거  
 ```
-<br/>   
+<br/>      
 
 
 #### 7. (중요) git pull 취소하는 명령 - git 관련 업데이트 예정 <branch master에서 main으로 변경>   
  ```  
  git reset --hard ORIG_HEAD  
  ```  
- 
+<br/>   
+
   
 #### 8. 다른 액티비티와 연결된 액티비티 새로고침     
  ```  
@@ -64,7 +67,7 @@ ft?.replace(this.id, newFragment)?.addToBackStack(null)?.commit()
  (프래그먼트 > 액티비티 > 새로고침 구조)   
  -> 새로고침을 액티비티 finish후 재호출로 구현하되, 화면전환 없도록 구현   
  ```
- <br/>   
+ <br/>      
  
  
 #### 9. notifyItemChanged시 payload 넘겨서 아이템 일부분만 업데이트 (코드 추가 예정)     
